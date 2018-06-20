@@ -66,7 +66,7 @@ All the rules have the same formation:
     Example:
         
         Rule:   nsubj dobj 0 f|0 have^contain^include|2 1
-        Tree:   node_1 <-----nsub------ node_0 -----dobj-----> node_2
+        Tree:   node_1 <-----nsubj------ node_0 -----dobj-----> node_2
         Word:   node_0 must be "have" or "contain" or "include"
         Output: node_2 inside node_1
 ### I want to test a different dataset
