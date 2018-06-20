@@ -79,7 +79,7 @@ All the rules have the same formation:
     following the formation:
         
         for Lessons:   {LessonID:{SentenceIndex:Tree}}
-        for Questions: {QuestionID:[Tree Tree Tree ...]}
+        for Questions: {QuestionID:[Tree, Tree, Tree, ...]}
         Tree:          [{NodeId:Word}, [[Head, Tail, Tag], [Head, Tail, Tag], ...]]
         (Notice that the indices start at 1)
 ### I want to work on the multiple choice questions
