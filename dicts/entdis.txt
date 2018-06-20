@@ -1,0 +1,6 @@
+compound||0 1
+nmod:of|0 !part^!type^!number^!member^!scale^!compose|0 1
+nsubj|0 !have^!consist^!cause^!lead^!make^!bring^!rise^!become^!produce^!reproduce!form^!type^!contain^!part^!number^!member^!scale|0 1
+nummod||0 1
+amod||0 1
+acl:relcl||0 1
