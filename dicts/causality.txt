@@ -1,0 +1,5 @@
+nsubjpass nmod:agent 0 f|0 cause^make^form^create^produce^reproduce|2 1
+nsubjpass nmod:from 0 f|0 come^make^origin^produce^reproduce|2 1
+nsubj dobj 0 f|0 cause^lead^bring^rise^become^create^form^produce^reproduce|1 2
+nsubj dobj 0 f nmod:of 2 f|0 cause^lead^bring^rise^become^create^produce^reproduce 2 amount^part^scale^number|1 3
+advcl||1 0
