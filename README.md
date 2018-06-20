@@ -13,7 +13,7 @@ Created by Juzheng Li at Tsinghua University
 The % accuracy results:
 
 | Task         | Random Ave | Random Best | Trick | MemN + VQA | BiDAF + DPG | IGMN (This code) | IGMN (full model) |
-|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |      Text TF | 49.00      | 50.10       | 51.90 | 50.50      | 50.40       | **55.31**        | 57.41             |
 
 ## License
