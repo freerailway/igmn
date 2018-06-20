@@ -63,6 +63,11 @@ All the rules have the same formation:
         for Entity Distinction: NodeHeadword NodeModifier
         for Caulsality:         NodeCause NodeResult
         for Structure:          NodeMember NodeEntirety
+    Example:
+        Rule:   nsubj dobj 0 f|0 have^contain^include|2 1
+        Tree:   node_1 <-----nsub------ node_0 -----dobj-----> node_2
+        Word:   node_0 must be "have" or "contain" or "include"
+        Output: node_2 inside node_1
 ### I want to test a different dataset
 1. You need to generate dependency trees from the sentences in your dataset.
 2. The Stanford CoreNLP Toolkit (Manning et al., ACL 2014) is suggested to make sure the dependency tags are consistent.
@@ -70,7 +75,7 @@ All the rules have the same formation:
 
         ./dependencies/lesson_tf.json
         ./dependencies/question_tf.json
-following the formation:
+    following the formation:
         
         for Lessons:   {LessonID:{SentenceIndex:Tree}}
         for Questions: {QuestionID:[Tree Tree Tree ...]}
