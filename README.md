@@ -8,6 +8,12 @@ Created by Juzheng Li, Hang Su, Jun Zhu, Siyu Wang and Bo Zhang at Tsinghua Univ
 * This code illstrates what CERG is and how it is built
 * This code does not include the tedious engineering work and thus it only works on the true or false questions
 
+## Performance
+The % accuracy results:
+| Task         | Random Ave | Random Best | Trick | MemN + VQA | BiDAF + DPG | IGMN (This code) | IGMN (full model)
+-------------------------------------------------------------------------------------------------------------------
+| TQA, Text TF | 49.00      | 50.10       | 51.90 | 50.50      | 50.40       | **55.31**        | 57.41
+
 ## License
 This code is released under the MIT License (refer to the LICENSE file for details)
 
@@ -65,7 +71,7 @@ with the same formation:
         
         lesson: {LessonID:{SentenceIndex:Tree}}
         question: {QuestionID:[Tree Tree Tree ...]}
-        Tree: [{NodeId:Word},[[Head, Tail, Tag], [Head, Tail, Tag], ...]]
+        Tree: [{NodeId:Word}, [[Head, Tail, Tag], [Head, Tail, Tag], ...]]
         (Notice that the indices starts at 1)
 ### I want to work on the multiple choice questions
 Not suggested.
@@ -77,4 +83,4 @@ At least you need to:
 1. Extract the words, lines and arrows (and even the stick figures) from the diagram. Record their positions.
 2. Design your own rules based on the positions. You may refer to those introduced in the paper.
 3. Build the CERG based on your rules
-4. Engineering work (such as "in this picture", "not in this picture", "how many appears", ect.)
+4. Embellish (dealing with "in this picture", "not in this picture", "how many appears", ect.)
