@@ -1,3 +1,2 @@
-# igmn
-
-The source code is under cleaning. We believe this will not take long.
+This source illstrates some unexplained details of the paper
+# Textbook Question Answering under Instructor Guidance with Memory Networks
