@@ -91,5 +91,5 @@ At least you need to:
 ### I want to work on the diagram questions
 1. Extract the words, lines and arrows (and even the stick figures) from the diagram. Record their positions.
 2. Design your own rules based on the positions. You may refer to those introduced in the paper.
-3. Build the CERG based on your rules
+3. Build the CERG based on your rules.
 4. Dealing with expressions which are not suited to the CERG but indeed useful, such as "in this picture", "not in this picture", "how many xxx appear", ect.
