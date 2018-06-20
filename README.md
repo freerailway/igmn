@@ -1,12 +1,13 @@
 This code illstrates some unexplained details of the paper
 # Textbook Question Answering under Instructor Guidance with Memory Networks
-Created by Juzheng Li, Hang Su, Jun Zhu, Siyu Wang and Bo Zhang at Tsinghua University
+Authors: Juzheng Li, Hang Su, Jun Zhu, Siyu Wang and Bo Zhang<br>
+Created by Juzheng Li at Tsinghua University
 
 ## Introduction
 * The original paper introduces a hierarchical model to deal with the Textbook Question Answering problem
-* Due to space limitation, some details of the Contradiction Enitity-Relationship Graph (CERG) is not presented in the paper
+* Due to space limitation, the Contradiction Enitity-Relationship Graph (CERG) is not presented in detail in the paper
 * This code illstrates what CERG is and how it is built
-* This code does not include the tedious engineering work and thus it only works on the true or false questions
+* This code only works on the true or false questions
 
 ## Performance
 The % accuracy results:
@@ -45,7 +46,8 @@ This code only have 25 rules. You can modify them as much as you need.
         ./dicts/entdis.txt     ... Rules for Entity Distinction type
         ./dicts/caulsality.txt ... Rules for Caulsality type
         ./dicts/structure.txt  ... Rules for Structure type
-2. Rule Formation: all the rules have the same formation
+2. Rule Formation<br>
+All the rules have the same formation:
     
         Subtree|TypicalWords|Output
     Subtree: the tree structure and dependency tags to match the full dependency tree of a sentence
@@ -55,33 +57,33 @@ This code only have 25 rules. You can modify them as much as you need.
         
         formation: WhichNode WordList WhichNode WordList WhichNode WordList ...
         WordList: Word^Word^Word...^!Word^!Word^!Word...
-        (! means the node is not the word, no ! means the node is one of the word)
-    Output: the extracted relationships including two numbers
+        (! means the node is not the word, no ! means the node is one of the words)
+    Output: the extracted relationship including two numbers
         
         for Entity Distinction: NodeHeadword NodeModifier
         for Caulsality:         NodeCause NodeResult
         for Structure:          NodeMember NodeEntirety
 ### I want to test a different dataset
-1. You need to generate dependency trees from every sentence in your dataset.
-2. We suggest you use the Stanford CoreNLP Toolkit (Manning et al., ACL 2014) to make sure the dependency tags are consistent.
+1. You need to generate dependency trees from the sentences in your dataset.
+2. The Stanford CoreNLP Toolkit (Manning et al., ACL 2014) is suggested to make sure the dependency tags are consistent.
 3. You need to save the dependency trees in json files:
 
         ./dependencies/lesson_tf.json
         ./dependencies/question_tf.json
-with the same formation:
+following the formation:
         
-        lesson: {LessonID:{SentenceIndex:Tree}}
-        question: {QuestionID:[Tree Tree Tree ...]}
-        Tree: [{NodeId:Word}, [[Head, Tail, Tag], [Head, Tail, Tag], ...]]
-        (Notice that the indices starts at 1)
+        for Lessons:   {LessonID:{SentenceIndex:Tree}}
+        for Questions: {QuestionID:[Tree Tree Tree ...]}
+        Tree:          [{NodeId:Word}, [[Head, Tail, Tag], [Head, Tail, Tag], ...]]
+        (Notice that the indices start at 1)
 ### I want to work on the multiple choice questions
 Not suggested.
 But if you really need, you will face a number of engineering work to deal with the multiple choice formation.
 At least you need to:
 1. Combine the question stems and the options
-2. Make the results in a continuous space (finding a most similar answer is much effective than judge every option)
+2. Make the results in a continuous space
 ### I want to work on the diagram questions
 1. Extract the words, lines and arrows (and even the stick figures) from the diagram. Record their positions.
 2. Design your own rules based on the positions. You may refer to those introduced in the paper.
 3. Build the CERG based on your rules
-4. Embellish (dealing with "in this picture", "not in this picture", "how many appears", ect.)
+4. Dealing with expressions which are not suited to the CERG but indeed useful, such as "in this picture", "not in this picture", "how many xxx appear", ect.
