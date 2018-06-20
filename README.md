@@ -64,6 +64,7 @@ All the rules have the same formation:
         for Caulsality:         NodeCause NodeResult
         for Structure:          NodeMember NodeEntirety
     Example:
+        
         Rule:   nsubj dobj 0 f|0 have^contain^include|2 1
         Tree:   node_1 <-----nsub------ node_0 -----dobj-----> node_2
         Word:   node_0 must be "have" or "contain" or "include"
