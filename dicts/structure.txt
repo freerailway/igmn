@@ -1,0 +1,14 @@
+nmod:inside|0 !have^!consist^!cause^!lead^!make^!bring^!rise^!become^!form^!type^!contain^!part^!number^!member^!scale|0 1
+nmod:in|0 !have^!consist^!cause^!lead^!make^!bring^!rise^!become^!form^!type^!contain^!part^!number^!member^!scale|0 1
+nmod:through|0 !have^!consist^!cause^!lead^!make^!bring^!rise^!become^!form^!type^!contain^!part^!number^!member^!scale|0 1
+nsubjpass nmod:in 0 f||1 2
+nsubjpass nmod:into 0 f|0 divide|2 1
+nsubjpass nmod:of 0 f|0 compose|2 1
+nsubjpass dobj 0 f|0 call^name|2 1
+nsubj cop 0 f|0 !type^!part|1 0
+nsubj dobj 0 f|0 have^contain^include|2 1
+nsubj dobj 0 f|0 !have^!contain^!include|2 0
+nsubj nmod:at 0 f||0 2
+nsubj nmod:of 0 f|0 type^part^member|1 2
+nsubj nmod:of 0 f|0 consist|2 1
+nsubj nmod:to 0 f|0 go^settle|1 2
