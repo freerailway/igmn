@@ -5,9 +5,15 @@ import random as rd
 
 def read_dict(filename):
 	f = open(filename, "r")
-	rules = f.read().split("\n")
+	rs = f.read()
+	if rs.find("\n") >= 0:
+		rules = rs.split("\n")
+	else:
+		rules = rs.split("\r")
 	out_rule = []
 	for rule in rules:
+		if len(rule) < 1:
+			continue
 		details = rule.split("|")
 		flat_tree = details[0].split(" ")
 		first_edge = flat_tree[0]
